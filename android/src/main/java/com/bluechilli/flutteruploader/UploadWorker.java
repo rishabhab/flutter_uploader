@@ -109,7 +109,7 @@ public class UploadWorker extends ListenableWorker implements CountProgressListe
   public Result doWorkInternal() {
     String url = getInputData().getString(ARG_URL);
     String method = getInputData().getString(ARG_METHOD);
-    int timeout = getInputData().getInt(ARG_REQUEST_TIMEOUT, 3600);
+    int timeout = getInputData().getInt(ARG_REQUEST_TIMEOUT, 60);
     boolean isBinaryUpload = getInputData().getBoolean(ARG_BINARY_UPLOAD, false);
     String headersJson = getInputData().getString(ARG_HEADERS);
     String parametersJson = getInputData().getString(ARG_DATA);
